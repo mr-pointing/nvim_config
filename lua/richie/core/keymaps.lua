@@ -4,6 +4,7 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit Insert mode with jk" })
 
 keymap.set("n", "<space>x", ":.lua<CR>")
 keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+keymap.set("n", "<space><space>p", "<cmd>term python %<CR>")
 keymap.set("v", "<space>x", ":lua<CR>")
 vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Highlight when yanking (copying) text',
