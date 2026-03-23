@@ -6,12 +6,12 @@ keymap.set("n", "<space>x", ":.lua<CR>")
 keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 keymap.set("n", "<space><space>p", "<cmd>term python %<CR>")
 keymap.set("v", "<space>x", ":lua<CR>")
-vim.api.nvim_create_autocmd('TextYankPost', {
-	desc = 'Highlight when yanking (copying) text',
-	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
 })
 
 -- increments/decrements integers
